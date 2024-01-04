@@ -63,7 +63,3 @@ volumes:
   zookeeper-log:
   zookeeper-data:
   kafka-data:
-
-#networks:
-#  kafka-net:
-#    driver: bridge

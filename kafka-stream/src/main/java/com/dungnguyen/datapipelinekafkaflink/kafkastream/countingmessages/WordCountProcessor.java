@@ -29,8 +29,12 @@ public class WordCountProcessor {
             .groupBy((key, word) -> word, Grouped.with(STRING_SERDE, STRING_SERDE))
             .count(Materialized.as("CountsStore"));
 
+//    wordCounts.toStream().to("count-message-output-topic", Produced.with(Serdes.String(), Serdes.Long()));
+
     KTable<String, String> stringValue = wordCounts.mapValues(String::valueOf);
 
     stringValue.toStream().to("count-message-output-topic");
   }
 }
+
+

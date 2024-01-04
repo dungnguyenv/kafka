@@ -83,7 +83,6 @@
             <version>30.1-jre</version> <!-- Use the latest version available -->
         </dependency>
 
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
